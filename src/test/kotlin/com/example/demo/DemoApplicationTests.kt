@@ -21,8 +21,8 @@ class DemoApplicationTests {
 
     @Test
     @Order(1)
-    fun `test await two times`() {
-        webTestClient.post().uri { builder -> builder.path("/test/await-await").build() }
+    fun `test mono`() {
+        webTestClient.post().uri { builder -> builder.path("/test/mono").build() }
             .exchange()
             .expectStatus().is2xxSuccessful
     }
